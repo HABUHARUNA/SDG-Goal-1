@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
-use App\Http\Contrrollers\VolunteerController;
+use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\StudentController;
 
 /*
