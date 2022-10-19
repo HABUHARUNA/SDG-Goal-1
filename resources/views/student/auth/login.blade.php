@@ -1,4 +1,4 @@
-@extends('layout.student')
+@extends('layout.app')
 @section('content')
 <div class="container mask d-flex">
     <div class="card-body mx-auto shadow p-3 mb-5 bg-body" style="margin-top: 100px">

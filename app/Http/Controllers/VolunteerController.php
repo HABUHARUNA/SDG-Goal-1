@@ -9,4 +9,7 @@ use App\Models\Post;
 class VolunteerController extends Controller
 {
     //
+    public function web(){
+        return view('volunteer.pages.baking');
+    }
 }

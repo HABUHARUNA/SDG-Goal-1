@@ -24,7 +24,11 @@ Route::get('/', [PagesController::class, 'home']);
 Route::get('/about', [PagesController::class, 'about']);
 Route::get('/contact', [PagesController::class, 'contact']);
 Route::get('/support', [PagesController::class, 'support']);
-
+Route::get('/register', [StudentController::class, 'register'])->name('register');
+Route::post('/create', [StudentController::class, 'create'])->name('student.create');
+Route::get('student/login', [StudentController::class, 'login'])->name('login');
+Route::get('/volunteer/web', [VolunteerController::class, 'web']);
+Route::get('/student/dashboard', [VolunteerController::class, 'dashboard']);
 Route::get('/tailoring', Function (){
     return view('student/pages/tailoring');
 });
