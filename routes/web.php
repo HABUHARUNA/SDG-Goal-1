@@ -23,6 +23,7 @@ Route::get('/welcome', function () {
 Route::get('/', [PagesController::class, 'home']);
 Route::get('/about', [PagesController::class, 'about']);
 Route::get('/contact', [PagesController::class, 'contact']);
+Route::get('/courses', [PagesController::class, 'courses']);
 Route::get('/support', [PagesController::class, 'support']);
 Route::get('/register', [StudentController::class, 'register'])->name('register');
 Route::post('/create', [StudentController::class, 'create'])->name('student.create');

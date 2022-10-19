@@ -7,9 +7,10 @@
       <div class="collapse navbar-collapse d-flex" id="navbarNavAltMarkup">
         
          <div class="nav-item mx-auto">
-            <ul class="navbar-nav">
+
+            <ul class="navbar-nav" id="myDIV">
                 <li class="nav-item me-5">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item me-5">
                     <a class="nav-link" href="/about">About Us</a>
@@ -21,26 +22,33 @@
                     <a class="nav-link" href="/support">Support Us</a>
                 </li>
             </ul>
+
         </div>
         <div class=" d-flex p-2">
-            <ul class="navbar-nav">
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="/create" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                     Register
-                    </a>
-                  
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Volunteer</a></li>
-                      <li><a class="dropdown-item" href="#"></a></li>
-                    </ul>
-                  </div> 
-                    <li class="nav-item mx-5">
-                        <a class="nav-link" href="#">login</a>
-                    </li>
-                
-           </ul>
-        </div>
-          
+          <ul class="navbar-nav">
+             
+            <div class="dropdown">
+                <p class="dropbtn" style="padding: 14px 0">Register</p>
+                <div class="dropdown-content">
+                    <a href="#">Volunteer</a>
+                    <a href="#">Student</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <p class="dropbtn" style="padding: 14px 50px 14px 50px">Login</p>
+                <div class="dropdown-content">
+                    <a href="#">Volunteer</a>
+                    <a href="#">Student</a>
+                </div>
+              </div>
+        
+                  {{-- <li class="nav-ite">
+                      <a class="nav-link" href="#">Login</a>
+                  </li> --}}
+              
+         </ul>
       </div>
+        
     </div>
-  </nav>
+  </div>
+</nav>

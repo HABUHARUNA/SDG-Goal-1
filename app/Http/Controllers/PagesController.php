@@ -19,4 +19,7 @@ class PagesController extends Controller
     public function support(){
         return view('pages.support');
     }
+    public function courses(){
+        return view('pages.courses');
+    }
 }
