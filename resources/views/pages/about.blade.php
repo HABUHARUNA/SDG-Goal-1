@@ -1,29 +1,38 @@
 @extends('layout.app')
 @section('content')
+<div class="overall">
 
-@extends('layout.app')
-@section('content')
+<div class="section1">
 
+<div class="centre">
+    <img src="{{asset('img/Centre.jpg')}}" alt="" height="400vh" width="100%">
+</div>
 <div class="about" style="text-align: center">
-    <h2>What We Do</h2>
-    <p >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in doloremque consectetur,  <br> 
-        aliquid illo quisquam numquam perspiciatis molestias reiciendis fugiat iure quam, eligendi recusa <br>
-        ndae et possimus sed repellendus dolorem veritatis.
-    </p>
+        <h2>Who We Are</h2>
+        <p >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in doloremque consectetur,  <br> 
+            aliquid illo quisquam numquam perspiciatis molestias reiciendis fugiat iure quam, eligendi recusa <br>
+            ndae et possimus sed repellendus dolorem veritatis.
+        </p>
+</div>
 </div>
 
 <div class="vision" style="text-align: center">
-    <h2>Our Vision</h2>
+    <h2 style="padding-top: 20px;">Our Vision</h2>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in doloremque consectetur,  <br> 
         aliquid illo quisquam numquam perspiciatis molestias reiciendis fugiat iure quam, eligendi recusa <br>
         ndae et possimus sed repellendus dolorem veritatis.
     </p>
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
 </div>
 
 
-<h2 style="text-align: center">Our Team</h2>
+<h2 style="text-align: center; padding-top:50px; padding-bottom:50px;">Our Team</h2>
 <div class="team">
     <div class="person">
         <img src="{{asset('img/img.png')}}" alt="jude">
@@ -85,20 +94,14 @@
         <div class="line1"> 
             <img src={{asset('img/icon-location.svg')}} alt="location">
             <span>Rayfield</span> <br> <br>
-            <img src={{asset('img/icon-phone.svg')}} alt="phone"><a href="tel:+1-543-123-4567">+1-543-123-4567</a><br> <br>
-            <img src={{asset('img/icon-email.svg')}} alt="email"><a href="mailto:example@huddle.com">example@huddle.com</a><br>
+            <img src={{asset('img/icon-phone.svg')}} alt="phone"><a href="tel:+1234-813-123-4557">+234-813-123-4557</a><br> <br>
+            <img src={{asset('img/icon-email.svg')}} alt="email"><a href="mailto:info@skillsforwealth.org">info@skillsforwealth.org</a><br>
         </div>
 
         <div class="line2"  style="line-height: 2.5;">
-            <a href="#">About Us</a><br>
+            <a href="/about">About Us</a><br>
             <a href="#">What We Do</a><br> 
-            <a href="#">FAQ</a>
-        </div>
-
-        <div class="line3" style="line-height: 2.5;">
-            <a href="#">Career</a><br>
-            <a href="#">Blog</a><br>
-            <a href="#">Contact Us</a>
+            <a href="/contact">Contact Us</a>
         </div>
        
         <div class="line4">
@@ -110,16 +113,11 @@
         <p style="padding-top: 150px; font-size: 12px;">Copyright 2022 Skills for Wealth. All rights reserved.</p>
         </div>
 </div>
+
 </div>
-
-
-
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-@endsection
 
 
 @endsection

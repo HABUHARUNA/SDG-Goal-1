@@ -1,14 +1,16 @@
 @extends('layout.app')
 @section('content')
-<br>
-<br>
+<div class="overall">
+    <br>
+    <br>
+
 
 <h2 style="text-align: center">Courses We Offer</h2>
 <br>
 <div class="courses">
 
     <div class="webdev">
-        <img src="{{asset('img/img.png')}}" alt="webdev">
+        <img src="{{asset('img/webdev.jpg')}}" alt="webdev" height="180px" width="320px">
         <h3>Web Development</h3>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in doloremque consectetur,  <br> 
@@ -19,7 +21,7 @@
     </div>
 
     <div class="baking">
-        <img src="{{asset('img/img.png')}}" alt="baking">
+        <img src="{{asset('img/bakke.jpg')}}" alt="baking" height="180px" width="320px">
         <h3>Baking</h3>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in doloremque consectetur,  <br> 
@@ -29,7 +31,7 @@
        <a href=""><button class="bttn">Register</button></a>
     </div>
     <div class="fashion">
-        <img src="{{asset('img/img.png')}}" alt="fashiondesign">
+        <img src="{{asset('img/fashdesign.jpg')}}" alt="fashiondesign" height="180px" width="320px">
         <h3>Fashion Designing</h3>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in doloremque consectetur,  <br> 
@@ -43,25 +45,20 @@
 
 
 
+
 <div class="mainfooter">
     <div class="footer">
         <div class="line1"> 
             <img src={{asset('img/icon-location.svg')}} alt="location">
             <span>Rayfield</span> <br> <br>
-            <img src={{asset('img/icon-phone.svg')}} alt="phone"><a href="tel:+1-543-123-4567">+1-543-123-4567</a><br> <br>
-            <img src={{asset('img/icon-email.svg')}} alt="email"><a href="mailto:example@huddle.com">example@huddle.com</a><br>
+            <img src={{asset('img/icon-phone.svg')}} alt="phone"><a  href="tel:+1234-813-123-4557">+234-813-123-4557</a><br> <br>
+            <img src={{asset('img/icon-email.svg')}} alt="email"><a  href="mailto:info@skillsforwealth.org">info@skillsforwealth.org</a><br>
         </div>
 
         <div class="line2"  style="line-height: 2.5;">
-            <a href="#">About Us</a><br>
+            <a href="/about">About Us</a><br>
             <a href="#">What We Do</a><br> 
-            <a href="#">FAQ</a>
-        </div>
-
-        <div class="line3" style="line-height: 2.5;">
-            <a href="#">Career</a><br>
-            <a href="#">Blog</a><br>
-            <a href="#">Contact Us</a>
+            <a href="/contact">Contact Us</a>
         </div>
        
         <div class="line4">
@@ -73,9 +70,8 @@
         <p style="padding-top: 150px; font-size: 12px;">Copyright 2022 Skills for Wealth. All rights reserved.</p>
         </div>
 </div>
+
 </div>
-
-
 
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -2,6 +2,20 @@
     margin: 0;
     padding: 0;
   }
+  nav{
+    background-color: hsl(192, 100%, 9%);
+  }
+  .overall{
+    background-color: #D8E3E8;
+    background-size: cover;
+  }
+  .overall:after{
+    content: "";
+    background-color:#D8E3E8;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+  }
   .sidebar {
     height: 100vh;
     width: 55px;
@@ -18,7 +32,7 @@
   .sidebar_item {
     display: flex;
     align-items: center;
-    padding: 5px 0px;
+    padding: 10px 0px;
     cursor: pointer;
     margin:0px 0px 10px 0px;
   }
@@ -30,10 +44,9 @@
     font-size: 18px;
     color: white;
     margin-left: 21px;
-    padding-top: 12px  ;
   }
   .sidebar_item i {
-    font-size: 23px;
+    font-size: 21px;
     color: white;
     margin-left: 15px;
   }
@@ -70,41 +83,48 @@
 }
 .hero{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: space-around;
+    background-color: #D8E3E8;
     position: relative;
 }
 .imgslide{
-    top:30%;
-    left: 60%;
+    top:8%;
+    left: 50%;
     position: absolute;
 }
-.imgslide img{
+.bg{
+    top:8%;
+    left:50%;
+    position: absolute;
+}
+.imgslide img, .bg img{
     display:none;
-    width: 100%;
+    border-radius: 50%;
 }
  .maintext{
     max-width: 50%;
     margin: 0px auto;
     position: absolute;
     top: 20%;
-    left: 5%;
+    left: 7%;
 }
 .text1{
     position: absolute;
     top: 33%;
-    left: 5%;
+    left: 7%;
 }
 .text1 p{
-    font-size: 24px;
+    font-size: 20px;
 }
 .text1 button{
     color:white;
     background-color: blue;
     padding: 10px 20px;
     border-radius: 24px;
-    font-size: 20px;
+    font-size: 16px;
+    margin-top: 10px;
     border: none;
 }
 .container{
@@ -158,21 +178,46 @@
 }
 .mainfooter{
     position: relative;
+    transform: skewY(-2deg); 
+    background-color: #D8E3E8;
 }
 .footer{
     display: flex;
     justify-content: space-between;
     background-color: hsl(192, 100%, 9%);
-    padding: 100px 50px 50px 50px;
+    padding: 60px 100px 50px 100px;
     color: white;
     margin: 0;
     margin-top: -50px;
+    border-top-left-radius: 60px;
+}
+.footer:before{
+    content: "";
+    width: 40px; 
+    height: 40px;
+    background-color: hsl(192, 100%, 9%);
+    position: absolute;
+    top: -39px;
+    right: 0;
+    z-index: -2;
+}
+.footer::after{
+    content:"";
+    width: 80px; 
+    height: 80px;
+    background-color: #D8E3E8;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    z-index: -1;
+    border-radius: 50%;
 }
 .mainfooter a{
     text-decoration: none;
     color: white;
+    transform: skewY(2deg);
 }
-.nainfooter a:hover{
+.mainfooter a:hover{
     text-decoration: underline;
 }
 h3{
@@ -182,6 +227,9 @@ h3{
 }
 #logowhite{
     filter: invert(1);
+}
+.line1, .line2, .line3, .line4{
+    transform: skewY(2deg);
 }
 .line1 a{
     padding-left: 8px;
@@ -259,12 +307,11 @@ h3{
     border-radius: 10px;
     padding-bottom: 40px;
     text-align: center;
-    background-color: blue;
+    background-color: white;
     box-shadow: 0px 0px 2px black;
     margin: 2px 50px;
 }
 .webdev img, .fashion img, .baking img{
-    width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -287,3 +334,128 @@ h3{
     color:white;
     text-decoration: underline;
 }
+.shapes{
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    position: absolute;
+    bottom: -30px;
+}
+.shapes img{
+    animation: shapes 20s linear infinite;
+}
+@keyframes shapes{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.7;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+.shapes img:nth-child(1){
+    animation-delay: 40s;
+}
+.shapes img:nth-child(2){
+    animation-delay: 5s;
+}
+.shapes img:nth-child(3){
+    animation-delay: 10s;
+}
+.shapes img:nth-child(4){
+    animation-delay: 20s;
+}
+.centre img{
+    opacity: 0.4;
+}
+.section1{
+    position: relative;
+    background: black;
+}
+.about{
+    padding-top: 50px;
+    padding-bottom: 40px;
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 23%;
+}
+.about p, .vision p{
+    padding-top: 10px;
+}
+.vision{
+    background-color: white;
+    padding:40px 0;
+}
+.vision ul li {
+	margin: 0;
+	padding: 10px 0 10px 10px;
+	list-style: none;
+	background-image: url("../img/tick-removebg-preview.svg");
+	background-repeat: no-repeat;
+	background-position: 36%;
+	background-size: 20px;
+}
+.contact{
+    text-align: center;
+    padding: 20px 0;
+}
+.contactform{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.contactform input[type=text], .contactform input[type=email], .contactform input[type=textarea]{
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: 1px gray solid;
+    margin-bottom: 10px;
+}
+.contactform input[type=submit]{
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+    background-color: black;
+}
+.contactform input[type=textarea]{
+    padding: 10px 20px 50px 20px;
+}
+.offer, .bttn{
+    animation: shake 3s infinite
+}
+.offer:hover{
+    background-color: transparent;
+    border: 1px blue solid;
+    color: black;
+}
+.bttn:hover{
+    background-color: transparent;
+    border: solid black 1px;
+    color: black;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  .line1 img a:hover{
+    text-decoration: underline;
+  }
