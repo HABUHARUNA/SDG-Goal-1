@@ -1,17 +1,17 @@
 @extends('layout.app')
 @section('content')
-<div class="container">
-    <div class="card-body mx-auto shadow p-3 mb-5 bg-body" style="margin-top: 100px">
-        <h2 class="text-uppercase text-center mb-5 bg-success p-2 text-white bg-opacity-75">Create an account</h2>
-              
+<div class="container1-1">
+  <h2>Student Registration</h2>  
+    <div class="container1-2">    
         <form action="{{Route('student.create')}}" method="POST">
           @csrf
         @error('firstname')
             <p class="text-danger">{{$message}}</p>    
         @enderror
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form3Example1cg">Firstname</label>
-            <input name="firstname" type="text" id="form3Example1cg" class="form-control form-control-lg" />
+
+          <div class="form-group">
+            <label class="" >Firstname</label>
+            <input name="firstname" type="text" class=""/>
           </div>
           
         @error('lastname')
@@ -19,9 +19,10 @@
             {{$message}}
           </div>      
         @enderror
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form3Example3cg">Lastname</label>
-            <input name="lastname" type="text" id="form3Example3cg" class="form-control form-control-lg" />
+
+          <div class="form-group">
+            <label class="" for="">Lastname</label>
+            <input name="lastname" type="text" id="" class=""/>
           </div>
           
         @error('email')
@@ -29,9 +30,9 @@
             {{$message}}
           </div>      
         @enderror
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form3Example4cg">Email</label>
-            <input name="email" type="email" id="form3Example4cg" class="form-control form-control-lg" />
+          <div class="form-group">
+            <label class="form-label" for="">Email</label>
+            <input name="email" type="email" id="" class="" />
           </div>
           
         @error('phone')
@@ -39,9 +40,9 @@
            {{$message}}
           </div>     
         @enderror
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form3Example4cdg">Phone Number</label>
-            <input name="phone" type="number" id="form3Example4cdg" class="form-control form-control-lg" />
+          <div class="form-group">
+            <label class="" for="">Phone Number</label>
+            <input name="phone" type="number" id="" class="" />
           </div>
         
 
@@ -50,9 +51,9 @@
            {{$message}}
           </div>     
         @enderror
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form3Example4cdg">Address</label>
-            <input name="address" type="text" id="form3Example4cdg" class="form-control form-control-lg" />
+          <div class="form-group">
+            <label class="" for="">Address</label>
+            <input name="address" type="text" id="" class="" />
           </div>
 
         @error('profile_photo')
@@ -60,38 +61,41 @@
            {{$message}}
           </div>     
         @enderror
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form3Example4cdg">Profile Photo</label>
-            <input name="profile_photo" type="file" id="form3Example4cdg" class="form-control form-control-lg" />
+          <div class="form-group">
+            <label class="" for="">Profile Photo</label>
+            <input name="" type="file" id="" class="" />
           </div>
           @error('password')
           <div class="text-danger">
            {{$message}}
           </div>     
         @enderror
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form3Example4cdg">Password</label>
-            <input name="password" type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+          <div class="form-group">
+            <label class="" for="">Password</label>
+            <input name="password" type="password" id="" class="" />
           </div>
           @error('password_confirmation')
           <div class="text-danger">
            {{$message}}
           </div>     
         @enderror
-          <div class="form-outline mb-4">
-            <label class="form-label" for="form3Example4cdg">Confirm Password</label>
-            <input name="password_confirmation" type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+          <div class="form-group">
+            <label class="" for="">Confirm Password</label>
+            <input name="password_confirmation" type="password" id="" class="" />
           </div>
 
-          <div class="d-flex justify-content-center">
+          <div class="form-group">
             <button type="submit"
-              class="btn btn-outline-dark btn-lg px-5">Register</button>
-          </div>
+              class="">Register</button>
+          
+          
+              <p class="">Have already an account? <a href=""
+                class=""><u>Login here</u></a></p>
+  
+            </div>
         
 
-          <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
-              class="fw-bold text-body"><u>Login here</u></a></p>
-
+         
         </form>
     </div>
 </div>

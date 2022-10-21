@@ -30,6 +30,7 @@ Route::post('/create', [StudentController::class, 'create'])->name('student.crea
 Route::get('student/login', [StudentController::class, 'login'])->name('login');
 Route::get('/volunteer/web', [VolunteerController::class, 'web']);
 Route::get('/student/dashboard', [VolunteerController::class, 'dashboard']);
+
 Route::get('/tailoring', Function (){
     return view('student/pages/tailoring');
 });
