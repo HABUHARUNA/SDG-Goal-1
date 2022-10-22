@@ -1,20 +1,28 @@
 @extends('layout.volunteer')
-
 @section('content')
-<form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+<div class="container1-1" id="activity-box" >
+  <h2> activity post</h2>
+  <div class="container1-2" id="">
+    <form action="" method="POST">
+      <div class="form-group">
+        <label for="title" class="form-label">Activity Title</label>
+        <input type="text" name="title"  >
+      </div>
+      <div class="form-group">
+        <label for="description" >Details of Activity</label>
+        <textarea name="description" id="" cols="100" rows="10"></textarea>
+      </div>
+       <div class="form-group">
+        <label>Upload Activity File</label>
+        <input type="file" name="file">
+      </div>
+      <div class="form-group">
+        <button type="submit"
+          class="">Submit</button>
+        </div>
   </form>
+   
+  </div>
+ 
+</div>
 @endsection

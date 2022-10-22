@@ -537,3 +537,9 @@ h3{
     letter-spacing: 13px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
+
+  /* activity post styling */
+  #activity-box{
+    height: 90vh;
+    width: 70vw;
+  }

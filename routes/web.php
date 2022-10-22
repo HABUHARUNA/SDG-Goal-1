@@ -38,5 +38,5 @@ Route::get('/web', Function (){
     return view('student/pages/web');
 });
 Route::get('/baking', Function (){
-    return view('student/pages/baking');
+    return view('volunteer/pages/baking');
 });
