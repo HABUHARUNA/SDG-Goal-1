@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class StudentController extends Controller
 {
@@ -30,17 +31,17 @@ class StudentController extends Controller
         return view('student.auth.register');
     }
     public function create(Request $request){
-        $form_data = $request->validator([
+        $form_data = $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
             'email' => 'required|email|unique:users',
-            'phone' => 'required|numeric|min:11|max:15',
+            'phone' => 'required|min:11|max:15',
             'address' => 'required',
-            'profile_photo' => 'required|image|mimes:jpeg,jpg,svg,png,gif|max:1999',
+            'profile_photo' => 'required||mimes:jpg,png,jpeg|max:1999',
             'password' => 'required|confirmed|min:4',
             'password_confirmation' => 'required'
         ]);
-        dd($form_data);
+    // dd($form_data);
         $profile_photo = $request->file('profile_photo')->store('public/users');
         $student = new User();
         $student->firstname = $request->firstname;
@@ -49,7 +50,7 @@ class StudentController extends Controller
         $student->phone = $request->phone;
         $student->address = $request->address;
         $student->profile_photo = $profile_photo;
-        $student->password = $request->password;
+        $student->password = Hash::make($request->password);
         $user = $student->save();
         return redirect('/student/login')->with('success', 'Student created successfully');
     }
@@ -57,7 +58,7 @@ class StudentController extends Controller
         return view('student.auth.login');
     }
     public function check(Request $request){
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+        if(Auth::guard('user')->attempt(['email' => $request->email, 'password' => $request->password])){
             $request->session()->regenerateToken();
             $request->session()->put('name', Auth::user()->firstname);
             return redirect('/student/dashboard')->with('success', 'Student Logged in');
