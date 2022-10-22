@@ -1,7 +1,7 @@
 @extends('layout.volunteer')
 @section('content')
 <div id="container1-1" class="container01">
-  <h2>Student Login</h2>  
+  <h2>Volunteer Login</h2>  
     <div class="container1-2">    
         <form action="" method="POST">
           @csrf
