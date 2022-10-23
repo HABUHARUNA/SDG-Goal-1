@@ -34,7 +34,7 @@
           <ul class="navbar-nav" style="padding-right: 80px">
              
             <div class="dropdown">
-                <p class="dropbtn" style="padding-right: 40px">Register</p>
+                <button class="dropbtn" style="margin-right: 40px;">Register</button>
                 <div class="dropdown-content">
                     <a href="#">Volunteer</a>
                     <a href="#">Student</a>
@@ -42,7 +42,7 @@
               </div>
 
               <div class="dropdown">
-                <p class="dropbtn">Login</p>
+                <button class="dropbtn">Login</button>
                 <div class="dropdown-content">
                     <a href="#">Volunteer</a>
                     <a href="#">Student</a>

@@ -62,7 +62,7 @@
     position: absolute;
     background-color: #f1f1f1;
     min-width: 80px;
-    margin-top: -10px;
+    margin-top: 1px;
 }
 .dropdown-content a {
     color: black;
@@ -72,8 +72,11 @@
 
 }
 .dropbtn{
-    color: white;
-    padding-top: 8px;
+    color: hsl(192, 100%, 9%);
+    background-color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: none;
 }
 .dropdown-content a:hover{
     background-color: #ddd;
@@ -83,7 +86,7 @@
 }
 .hero{
     width: 100%;
-    height: 90vh;
+    height: 83vh;
     display: flex;
     justify-content: space-around;
     background-color: #D8E3E8;
@@ -340,7 +343,7 @@ h3{
     align-items: center; 
     justify-content: space-around;
     position: absolute;
-    bottom: -30px;
+    bottom: -90px;
 }
 .shapes img{
     animation: shapes 20s linear infinite;
@@ -395,7 +398,7 @@ h3{
     background-color: white;
     padding:40px 0;
 }
-.vision ul li {
+.vision ul li{
 	margin: 0;
 	padding: 10px 0 10px 10px;
 	list-style: none;
@@ -493,7 +496,7 @@ h3{
     border-radius: 10px;
     padding: 12px;
   }
-  label,input{
+  .form-group label, .form-group input{
     display:flex;
     flex-direction:column;
     width: 43vw;
@@ -543,4 +546,88 @@ h3{
     height: 90vh;
     width: 70vw;
   }
-
+.facto{
+    position: relative;
+    transform: skewY(-2deg); 
+    
+}
+.fact{
+    background-color: hsl(192, 100%, 9%);
+    color: white;
+    border-top-left-radius: 60px;
+    text-align: center;
+}
+.fact h2, .fact p, .fact img{
+    transform: skewY(2deg); 
+}
+.fact:before{
+    content: "";
+    width: 40px; 
+    height: 40px;
+    background-color: hsl(192, 100%, 9%);
+    position: absolute;
+    top: -39px;
+    right: 0;
+    z-index: -2;
+}
+.fact::after{
+    content:"";
+    width: 80px; 
+    height: 80px;
+    background-color: #D8E3E8;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    z-index: -1;
+    border-radius: 50%;
+}
+.fact{
+    padding: 50px 50px;
+}
+.goal{
+   text-align: center;
+   padding: 50px 100px;
+}
+.goal h3{
+    padding-bottom:20px;
+}
+.goal p{
+    padding-bottom: 50px;
+}
+.section2{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.percent{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    position: absolute;
+    color: white;
+    top: 30%;
+    left: 16%;
+}
+.section3{
+    background-color: hsl(192, 100%, 9%);
+    color: white;
+    margin-top: -50px;
+    padding-bottom: 75px;
+}
+.inside{
+    padding-top:20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.actionplan p{
+    margin-left: -25%;
+}
+.actionplan{
+    padding-top: 50px;
+}
+.inside img{
+    margin-top: -60px;
+}
