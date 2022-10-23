@@ -92,6 +92,11 @@
     background-color: #D8E3E8;
     position: relative;
 }
+.hero2{
+    width: 100%;
+    height: 93vh;
+    background-color: #D8E3E8;
+}
 .imgslide{
     top:8%;
     left: 50%;
@@ -415,7 +420,7 @@ h3{
     text-align: center;
     padding-bottom: 50px;
 }
-.contactform input[type=text], .contactform input[type=email], .contactform input[type=textarea]{
+.contactform input[type=text], .contactform input[type=email], .contactform input[type=textarea], .contactform input[type=password]{
     border-radius: 15px;
     padding: 10px 20px;
     border: 1px gray solid;
@@ -477,8 +482,7 @@ h3{
   }
   .container1-1 h2{
     text-align: center;
-    color: #ffffff;
-    background-color: hsl(192, 100%, 9%);
+    color: black;
     text-transform: uppercase;
     font-size: 30px;
     border-radius: 20px;
