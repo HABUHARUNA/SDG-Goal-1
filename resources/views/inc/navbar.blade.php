@@ -36,16 +36,16 @@
             <div class="dropdown">
                 <button class="dropbtn" style="margin-right: 40px;">Register</button>
                 <div class="dropdown-content">
-                    <a href="#">Volunteer</a>
-                    <a href="#">Student</a>
+                    <a href="/volunteer/register">Volunteer</a>
+                    <a href="/student/register">Student</a>
                 </div>
               </div>
 
               <div class="dropdown">
                 <button class="dropbtn">Login</button>
                 <div class="dropdown-content">
-                    <a href="#">Volunteer</a>
-                    <a href="#">Student</a>
+                    <a href="/volunteer/login">Volunteer</a>
+                    <a href="/student/login">Student</a>
                 </div>
               </div>
         
