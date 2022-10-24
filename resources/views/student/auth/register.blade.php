@@ -48,8 +48,21 @@
         @enderror
 
       
-      <input name="address" type="text" id="" class="" placeholder="Enter your Address" value="{{old('address')}}" required>
-          <br>
+      {{-- <input name="course" type="radio" value="Baking"> 
+      <label for="Baking">Baking</label>
+      <input name="course" type="radio" value="Tailoring"> 
+      <label for="Tailoring">Tailoring</label>
+      <input name="course" type="radio" value="Web Development"> 
+      <label for="Web Development">Web Development</label> --}}
+          
+      @error('address')
+          <div class="text-danger">
+           {{$message}}
+          </div>     
+        @enderror
+
+      
+      <input name="address" type="text" id="" class="" placeholder="Enter your Address" value="{{old('address')}}" required><br>
           @error('password')
           <div class="text-danger">
            {{$message}}

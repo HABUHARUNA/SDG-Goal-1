@@ -12,17 +12,17 @@ class VolunteerController extends Controller
 {
     //
     public function webDev(){
-        return view('volunteer.pages.baking');
+        return view('volunteer.pages.web');
     }
     public function baking(){
-        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+        // $posts = Post::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('student.pages.baking', compact('posts'));
+        return view('volunteer.pages.baking');
     }
     public function tailor(){
-        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+        // $posts = Post::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('student.pages.tailoring', compact('posts'));
+        return view('volunteer.pages.tailoring');
     }
     
     public function register(){
