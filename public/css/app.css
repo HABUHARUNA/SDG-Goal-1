@@ -408,12 +408,13 @@ h3{
     padding:40px 0;
 }
 .vision ul li{
-	margin: 0;
-	padding: 10px 0 10px 10px;
+	margin-left: 22%;
+	padding: 10px 0 10px 40px;
 	list-style: none;
+    text-align: left;
 	background-image: url("../img/tick-removebg-preview.svg");
 	background-repeat: no-repeat;
-	background-position: 36%;
+	background-position: 1%;
 	background-size: 20px;
 }
 .contact{
@@ -617,8 +618,14 @@ h3{
     justify-content: space-around;
     margin: 0 auto;
 }
-.actionplan p{
-    margin-left: -25%;
+.section4{
+    background-color: #D8E3E8;
+    color: black;
+    padding-bottom: 50px;
+}
+.actionplan ul li{
+    margin-left: -15%;
+    padding-bottom: 15px;
 }
 .actionplan{
     padding-top: 50px;

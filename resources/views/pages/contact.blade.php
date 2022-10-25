@@ -15,7 +15,7 @@
     <input type="text" name="name" placeholder="Your full name" required> <br>
     <input type="email" name="email" placeholder="Your email address" required> <br>
     <input type="text" name="phone" placeholder="Your phone number" required> <br>
-    <input type="textarea" name="address" placeholder="Type in your address" required> <br>
+    <input type="text" name="address" placeholder="Type in your address" required> <br>
     <input type="submit" value="Submit"> <br>
     </form>
 </div>
