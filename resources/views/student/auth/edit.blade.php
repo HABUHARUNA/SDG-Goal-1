@@ -79,8 +79,7 @@
          <input name="profile_photo" type="file" id="" class="" accept="image/*" style="padding-left:120px"  required> <br> <br>
 
             <input type="submit" value="Register">
-              <p class="">Have already an account? <a href="/student/login"
-                class=""><u>Login here</u></a></p>  
+             
         </form>
       </div>
 </div>
