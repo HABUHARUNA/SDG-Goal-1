@@ -11,19 +11,7 @@ use Illuminate\Support\Facades\Hash;
 class VolunteerController extends Controller
 {
     //
-    public function webDev(){
-        return view('volunteer.pages.baking');
-    }
-    public function baking(){
-        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
-
-        return view('student.pages.baking', compact('posts'));
-    }
-    public function tailor(){
-        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
-
-        return view('student.pages.tailoring', compact('posts'));
-    }
+   
     
     public function register(){
         return view('volunteer.auth.register');
@@ -53,7 +41,7 @@ class VolunteerController extends Controller
         $student->profile_photo = $profile_photo;
         $student->password = Hash::make($request->password);
         $user = $student->save();
-        return to_route('admin.login')->with('success', 'Volunteer created successfully');
+        return redirect()->route('admin.login')->with('success', 'Volunteer created successfully');
     }
 
     public function check(Request $request){

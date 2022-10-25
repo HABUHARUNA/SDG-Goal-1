@@ -28,32 +28,31 @@
 </li>
 </ul>
 
-</div>
 
-<div class=" d-flex p-2">
-<ul class="navbar-nav" style="padding-right: 80px">
+        <div class=" d-flex p-2">
+          <ul class="navbar-nav" style="padding-right: 80px">
+             
+            <div class="dropdown">
+                <button class="dropbtn" style="margin-right: 40px;">Register</button>
+                <div class="dropdown-content">
+                    <a href="/volunteer/register">Volunteer</a>
+                    <a href="/student/register">Student</a>
+                </div>
+              </div>
 
-<div class="dropdown">
-<p class="dropbtn" style="padding-right: 40px">Register</p>
-<div class="dropdown-content">
-<a href="/volunteer/register">Volunteer</a>
-<a href="/student/register">Student</a>
-</div>
-</div>
-
-<div class="dropdown">
-<p class="dropbtn">Login</p>
-<div class="dropdown-content">
-<a href="/volunteer/login">Volunteer</a>
-<a href="/student/login">Student</a>
-</div>
-</div>
-
-
-
-</ul>
-</div>
-
-</div>
-</div>
+              <div class="dropdown">
+                <button class="dropbtn">Login</button>
+                <div class="dropdown-content">
+                    <a href="/volunteer/login">Volunteer</a>
+                    <a href="/student/login">Student</a>
+                </div>
+              </div>
+        
+              
+              
+         </ul>
+      </div>
+        
+    </div>
+  </div>
 </nav>
