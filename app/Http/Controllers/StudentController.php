@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Post;
+use App\Models\{User,Post};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -52,16 +51,20 @@ class StudentController extends Controller
         $student->profile_photo = $profile_photo;
         $student->password = Hash::make($request->password);
         $user = $student->save();
-        return redirect('/student/login')->with('success', 'Student created successfully');
+        return to_route('student.login')->with('success', 'Student created successfully');
     }
     public function login(){
         return view('student.auth.login');
     }
     public function check(Request $request){
-        if(Auth::guard('user')->attempt(['email' => $request->email, 'password' => $request->password])){
+            $credentials = $request->validate([
+                'email' => 'required|email',
+                'password' => 'required|min:4'
+            ]);
+            if(auth()->attempt($credentials)){
             $request->session()->regenerateToken();
-            $request->session()->put('name', Auth::user()->firstname);
-            return redirect('/student/dashboard')->with('success', 'Student Logged in');
+           
+            return redirect()->route('student.dashboard')->with('success', 'Student Logged in');
         }
         return back()->withErrors(['error' => 'Invalid Username/Password!']);
     }

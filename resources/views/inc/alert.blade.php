@@ -1,16 +1,16 @@
-@if (Session::has('success'))
-<div class="alert alert-success alert-dismissable" role="alert">
-    <strong>Success! </strong>{{ session('success')}}
-</div>
-
+@if (count($errors)> 0)
+    @foreach ($errors->all() as $error)
+        <div class="alert alert-danger">
+            {{$error}}
+        </div>
+    @endforeach
+    
 @endif
 
-@if (Session::has('error'))
-<div class="alert alert-danger alert-dismissable" role="alert">
-    <button type="button" class="close" data-dismiss='alert'>
-        <i class="fa fa-times"></i>
-    </button>
-    <strong>Error</strong>{{ session('error')}}
+<div>
+    @if (session()->has('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 </div>
-
-@endif

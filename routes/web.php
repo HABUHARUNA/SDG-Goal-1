@@ -29,24 +29,24 @@ Route::get('/courses', [PagesController::class, 'courses']);
 
 // Student
 Route::get('/student/register', [StudentController::class, 'register'])->name('student.register');
-Route::get('/student/web', [StudentController::class, 'WebDev'])->middleware('auth');
-Route::get('/student/baking', [StudentController::class, 'baking'])->middleware('auth');
-Route::get('/student/tailoring', [StudentController::class, 'tailor'])->middleware('auth');
+Route::get('/student/web', [StudentController::class, 'WebDev'])->middleware('student.auth');
+Route::get('/student/baking', [StudentController::class, 'baking'])->middleware('student.auth');
+Route::get('/student/tailoring', [StudentController::class, 'tailor'])->middleware('student.auth');
 Route::post('/student/create', [StudentController::class, 'create'])->name('student.create');
-Route::get('/student/login', [StudentController::class, 'login'])->name('login');
-Route::get('/student/dashboard', [StudentController::class, 'dashboard'])->middleware('auth');
-Route::post('/student/check', [StudentController::class, 'check'])->name('student.login');
+Route::get('/student/login', [StudentController::class, 'login'])->name('student.login');
+Route::get('/student/dashboard', [StudentController::class, 'dashboard'])->name('student.dashboard')->middleware('student.auth');
+Route::post('/student/check', [StudentController::class, 'check'])->name('student.check');
 Route::get('/student/logout', [StudentController::class, 'logout'])->name('student.logout');
 
 // Volunteer
-Route::get('/volunteer/web', [VolunteerController::class, 'webDev'])->middleware('auth');
-Route::get('/volunteer/baking', [VolunteerController::class, 'baking'])->middleware('auth');
-Route::get('/volunteer/tailoring', [VolunteerController::class, 'tailor'])->middleware('auth');
+Route::get('/volunteer/web', [VolunteerController::class, 'webDev'])->middleware('admin.auth');
+Route::get('/volunteer/baking', [VolunteerController::class, 'baking'])->middleware('admin.auth');
+Route::get('/volunteer/tailoring', [VolunteerController::class, 'tailor'])->middleware('admin.auth');
 Route::post('/volunteer/create', [VolunteerController::class, 'create'])->name('volunteer.create');
 Route::post('/volunteer/check', [VolunteerController::class, 'check'])->name('volunteer.login');
-Route::get('/volunteer/dashboard', [StudentController::class, 'dashboard'])->middleware('auth');
+Route::get('/volunteer/dashboard', [VolunteerController::class, 'dashboard'])->name('volunteer.dashboard')->middleware('admin.auth');
 Route::get('/volunteer/register', [VolunteerController::class, 'register'])->name('volunteer.register');
-Route::get('/volunteer/login', [VolunteerController::class, 'login'])->name('login');
+Route::get('/volunteer/login', [VolunteerController::class, 'login'])->name('admin.login');
 
 
 // Route::get('/tailoring', Function (){

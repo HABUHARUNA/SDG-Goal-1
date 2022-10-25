@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Vuser;
+use App\Models\Admin;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -35,7 +35,7 @@ class VolunteerController extends Controller
         $form_data = $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
-            'email' => 'required|email|unique:vusers',
+            'email' => 'required|email|unique:admins',
             'phone' => 'required|min:11|max:15',
             'address' => 'required',
             'profile_photo' => 'required||mimes:jpg,png,jpeg|max:1999',
@@ -44,7 +44,7 @@ class VolunteerController extends Controller
         ]);
         // dd($form_data);
         $profile_photo = $request->file('profile_photo')->store('public/users');
-        $student = new Vuser();
+        $student = new Admin();
         $student->firstname = $request->firstname;
         $student->lastname = $request->lastname;
         $student->email = $request->email;
@@ -53,14 +53,18 @@ class VolunteerController extends Controller
         $student->profile_photo = $profile_photo;
         $student->password = Hash::make($request->password);
         $user = $student->save();
-        return redirect('/volunteer/login')->with('success', 'Volunteer created successfully');
+        return to_route('admin.login')->with('success', 'Volunteer created successfully');
     }
 
     public function check(Request $request){
-        if(Auth::guard('vuser')->attempt(['email' => $request->email, 'password' => $request->password])){
-            $request->session()->regenerateToken();
-            $request->session()->put('name', Auth::user()->firstname);
-            return redirect('/volunteer/dashboard')->with('success', 'Volunteer Logged in');
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|min:4'
+        ]);
+        if(Auth::guard('admin')->attempt($credentials)){
+             $request->session()->regenerateToken();
+            // $request->session()->put('name', Auth::guard('admin')->firstname);
+            return redirect()->route('volunteer.dashboard')->with('success', 'Volunteer Logged in');
         }
         return back()->withErrors(['error' => 'Invalid Username/Password!']);
     }
