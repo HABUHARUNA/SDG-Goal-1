@@ -15,24 +15,6 @@
                 <i class="fas fa-book"></i>
                 <p>Courses</p>
             </div>
-
-            <div class="sidebar_item">
-                <i class="fas fa-eye"></i>
-                <p>Activities</p>
-            </div>
-            <div class="sidebar_item">
-                <i class="far fa-calendar"></i>
-                <p>Events</p>
-            </div>
-            <div class="sidebar_item">
-                <i class="fas fa-users"></i>
-                <p>Community</p>
-            </div>
-
-            <div class="sidebar_item">
-                <i class="fas fa-exclamation-circle"></i>
-                <p>Help</p>
-            </div>
             <div class="sidebar_item">
                 <i class="fas fa-id-card"></i>
                 <p>Profile</p>
