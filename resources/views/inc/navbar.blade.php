@@ -1,6 +1,5 @@
-    
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark" 
-    style="background-color: hsl(192, 100%, 9%);">
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark" 
+style="background-color: hsl(192, 100%, 9%);">
 <div class="container-fluid">
 <a class="navbar-brand mx-5" href="/" style="font-size: 24px">Skills<i style="font-size:32px; ">4</i>Wealth</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,31 +27,32 @@
 </li>
 </ul>
 
+</div>
 
-        <div class=" d-flex p-2">
-          <ul class="navbar-nav" style="padding-right: 80px">
-             
-            <div class="dropdown">
-                <button class="dropbtn" style="margin-right: 40px;">Register</button>
-                <div class="dropdown-content">
-                    <a href="/volunteer/register">Volunteer</a>
-                    <a href="/student/register">Student</a>
-                </div>
-              </div>
+<div class=" d-flex p-2">
+<ul class="navbar-nav" style="padding-right: 80px">
 
-              <div class="dropdown">
-                <button class="dropbtn">Login</button>
-                <div class="dropdown-content">
-                    <a href="/volunteer/login">Volunteer</a>
-                    <a href="/student/login">Student</a>
-                </div>
-              </div>
-        
-              
-              
-         </ul>
-      </div>
-        
-    </div>
-  </div>
+<div class="dropdown">
+<button class="dropbtn" style="margin-right: 40px;">Register</button>
+<div class="dropdown-content">
+<a href="/volunteer/register">Volunteer</a>
+<a href="/student/register">Student</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Login</button>
+<div class="dropdown-content">
+<a href="/volunteer/login">Volunteer</a>
+<a href="/student/login">Student</a>
+</div>
+</div>
+
+
+
+</ul>
+</div>
+
+</div>
+</div>
 </nav>

@@ -137,7 +137,7 @@
             @enderror
 
           
-          <input name="address" type="text" id="" class="" placeholder="Enter your Address" value="{{old('address')}}" required>
+          <input name="address" type="textarea" id="" class="" placeholder="Enter your Address" value="{{old('address')}}" required>
               <br>
               @error('password')
               <div class="text-danger">
