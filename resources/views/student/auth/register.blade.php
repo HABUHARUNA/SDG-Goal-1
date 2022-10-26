@@ -112,12 +112,6 @@
       <input name="phone" type="text" id="" class="" placeholder="Enter your phone number" value="{{old('phone')}}"required>
         <br>
 
-        @error('address')
-          <div class="text-danger">
-           {{$message}}
-          </div>     
-        @enderror
-
       
       {{-- <input name="course" type="radio" value="Baking"> 
       <label for="Baking">Baking</label>
@@ -125,6 +119,16 @@
       <label for="Tailoring">Tailoring</label>
       <input name="course" type="radio" value="Web Development"> 
       <label for="Web Development">Web Development</label> --}}
+<div class="form-group">
+    <p>Courses</p>
+    <select name="course_id" id="courses">
+        @foreach ($courses as $course)
+          <option value="{{$course->id}}">{{$course->name}}</option>
+        @endforeach
+     
+    </select>
+</div>
+</body>
           
       @error('address')
           <div class="text-danger">

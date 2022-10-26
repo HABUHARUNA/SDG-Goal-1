@@ -47,26 +47,29 @@ Route::post('/volunteer/check', [VolunteerController::class, 'check'])->name('vo
 Route::get('/volunteer/dashboard', [VolunteerController::class, 'dashboard'])->name('volunteer.dashboard')->middleware('admin.auth');
 Route::get('/volunteer/register', [VolunteerController::class, 'register'])->name('volunteer.register');
 Route::get('/volunteer/login', [VolunteerController::class, 'login'])->name('admin.login');
+Route::post('/volunteer/addcourse', [VolunteerController::class, 'add_course'])->name('add.course');
+Route::get('/volunteer/post', [VolunteerController::class, 'post']);
+Route::post('/volunteer/create/post', [Volunteer::class, 'create_post'])->name('volunteer.post');
 
 
-// POST 
-Route::get('/volunteer/web', [WebController::class, 'webDev'])->middleware('admin.auth');
-Route::post('/volunteer/webpost', [WebController::class, 'post_web'])->name('web.post');
-Route::get('/volunteer/web/edit/{id}',[WebController::class, 'web_edit'])->middleware('admin.auth');
-Route::post('/volunteer/web/update/{id}', [WebController::class, 'update'])->name('volunteer.web.edit');
-Route::get('/volunteer/web/delete/{id}', [WebController::class, 'destroy'])->middleware('admin.auth');
+// // POST 
+// Route::get('/volunteer/web', [WebController::class, 'webDev'])->middleware('admin.auth');
+// Route::post('/volunteer/webpost', [WebController::class, 'post_web'])->name('web.post');
+// Route::get('/volunteer/web/edit/{id}',[WebController::class, 'web_edit'])->middleware('admin.auth');
+// Route::post('/volunteer/web/update/{id}', [WebController::class, 'update'])->name('volunteer.web.edit');
+// Route::get('/volunteer/web/delete/{id}', [WebController::class, 'destroy'])->middleware('admin.auth');
 
 
-Route::get('/volunteer/baking', [BakingController::class, 'baking'])->middleware('admin.auth');
-Route::post('/volunteer/bakingpost', [BakingController::class, 'post_baking'])->name('baking.post');
-Route::get('/volunteer/baking/edit/{id}',[BakingController::class, 'baking_edit'])->middleware('admin.auth');
-Route::post('/volunteer/baking/update/{id}', [BakingController::class, 'update'])->name('volunteer.baking.edit');
-Route::get('/volunteer/baking/delete/{id}', [BakingController::class ,'destroy'])->middleware('admin.auth');
+// Route::get('/volunteer/baking', [BakingController::class, 'baking'])->middleware('admin.auth');
+// Route::post('/volunteer/bakingpost', [BakingController::class, 'post_baking'])->name('baking.post');
+// Route::get('/volunteer/baking/edit/{id}',[BakingController::class, 'baking_edit'])->middleware('admin.auth');
+// Route::post('/volunteer/baking/update/{id}', [BakingController::class, 'update'])->name('volunteer.baking.edit');
+// Route::get('/volunteer/baking/delete/{id}', [BakingController::class ,'destroy'])->middleware('admin.auth');
 
-Route::get('/volunteer/tailoring', [TailoringController::class, 'tailor'])->middleware('admin.auth');
-Route::post('/volunteer/tailoringpost', [TailoringController::class, 'tailoring_post'])->name('tailoring.post');
-Route::get('/volunteer/tailoring/edit/{id}',[TailoringController::class, 'tailoring_edit'])->middleware('admin.auth');
-Route::post('/volunteer/tailoring/update/{id}', [TailoringController::class, 'update'])->name('volunteer.tailoring.edit');
-Route::get('/volunteer/tailoring/delete/{id}', [TailoringController::class ,'destroy'])->middleware('admin.auth');
+// Route::get('/volunteer/tailoring', [TailoringController::class, 'tailor'])->middleware('admin.auth');
+// Route::post('/volunteer/tailoringpost', [TailoringController::class, 'tailoring_post'])->name('tailoring.post');
+// Route::get('/volunteer/tailoring/edit/{id}',[TailoringController::class, 'tailoring_edit'])->middleware('admin.auth');
+// Route::post('/volunteer/tailoring/update/{id}', [TailoringController::class, 'update'])->name('volunteer.tailoring.edit');
+// Route::get('/volunteer/tailoring/delete/{id}', [TailoringController::class ,'destroy'])->middleware('admin.auth');
 
 

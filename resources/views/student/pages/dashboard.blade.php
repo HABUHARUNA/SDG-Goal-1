@@ -10,7 +10,7 @@
 
             <div class="sidebar_item">
                 <i class="fas fa-book"></i>
-                <p>Courses</p>
+                <a href="/student/web"  type="button" >Course</a>
             </div>
 
             <div class="sidebar_item">
@@ -36,5 +36,6 @@
             </div>
         </div>
     </div>
+
     <script src="{{ URL::asset('js/script.js') }}"></script>
 @endsection

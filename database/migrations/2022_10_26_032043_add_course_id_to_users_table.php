@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tailorings', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('file');
-            $table->string('description');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('course_id')->constrained();
         });
     }
 
@@ -29,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tailorings');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 };

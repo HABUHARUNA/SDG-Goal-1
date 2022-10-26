@@ -3,31 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{User,Post};
+use App\Models\{User,Post,Course};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class StudentController extends Controller
 {
     public function WebDev(){
-        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+        $posts = Post::where('course_id',Auth::user()->course_id)->orderBy('created_at', 'desc')->paginate(10);
 
-        return view('student.pages.web', compact('posts'));
+
+         return view('student.pages.web', compact('posts'));
     }
     public function baking(){
-        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+        // $posts = Post::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('student.pages.baking', compact('posts'));
+        return view('student.pages.baking');
     }
     public function tailor(){
-        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+        // $posts = Post::orderBy('created_at', 'desc')->paginate(10);
 
-        return view('student.pages.tailoring', compact('posts'));
+        return view('student.pages.tailoring');
     }
 
     public function register(){
-
-        return view('student.auth.register');
+        $courses = Course::all();
+        return view('student.auth.register', compact('courses'));
     }
     public function create(Request $request){
         $form_data = $request->validate([
@@ -50,6 +51,7 @@ class StudentController extends Controller
         $student->address = $request->address;
         $student->profile_photo = $profile_photo;
         $student->password = Hash::make($request->password);
+        $student->course_id = $request->course_id;
         $user = $student->save();
         return to_route('student.login')->with('success', 'Student created successfully');
     }
@@ -69,8 +71,36 @@ class StudentController extends Controller
         return back()->withErrors(['error' => 'Invalid Username/Password!']);
     }
     public function dashboard(){
+        //$student = User::find($id);
         return view('student.pages.dashboard');
         
+    }
+    public function edit(){
+        return view('student.auth.edit');
+    }
+    public function student_update(Request $request ,$id){
+        $form_data = $request->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'email' => 'required|email|unique:admins',
+            'phone' => 'required|min:11|max:15',
+            'address' => 'required',
+            'profile_photo' => 'required||mimes:jpg,png,jpeg|max:1999',
+            'password' => 'required|confirmed|min:4',
+            'password_confirmation' => 'required'
+        ]);
+
+        $profile_photo = $request->file('profile_photo')->store('public/users');
+        $student = Student::find($id);
+        $student->firstname = $request->firstname;
+        $student->lastname = $request->lastname;
+        $student->email = $request->email;
+        $student->phone = $request->phone;
+        $student->address = $request->address;
+        $student->profile_photo = $profile_photo;
+        $student->password = Hash::make($request->password);
+        $student->update();
+        return redirect()->route('student.dashboard')->with('success', 'Student Updated Successfully');
     }
     public function logout(Request $request){
         Auth::logout();
