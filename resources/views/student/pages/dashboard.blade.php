@@ -12,10 +12,10 @@
             </div>
         </a>
 
-            <div class="sidebar_item">
-                <i class="fas fa-book"></i>
-                <a href="/student/web"  type="button" >Course</a>
-            </div>
+        <div class="sidebar_item">
+            <i class="fas fa-book"></i>
+            <p>Courses</p>
+        </div>
 
             <div class="sidebar_item">
                 <i class="fas fa-eye"></i>
