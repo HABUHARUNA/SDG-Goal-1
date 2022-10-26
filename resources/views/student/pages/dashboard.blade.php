@@ -1,6 +1,8 @@
 @extends('layout.student')
-
+<div class="hero3">
 @section('content')
+
+
     <div class="sidebar">
         <div class="sidebar_container">
             <div class="sidebar_item">
@@ -37,5 +39,9 @@
         </div>
     </div>
 
+<<<<<<< HEAD
+=======
+</div>
+>>>>>>> f4f6261bab23964db96370af4d8ffc9fabfa400e
     <script src="{{ URL::asset('js/script.js') }}"></script>
 @endsection

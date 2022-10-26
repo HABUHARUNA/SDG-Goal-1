@@ -34,7 +34,7 @@
                                 </div>
 
                                 <div class="skills">
-                                    <span>with us</span>
+                                    <span>to earn</span>
                                     <span>to grow</span>
                                     <span>for free</span>
                                     <span>to earn</span>
@@ -56,7 +56,7 @@
 
 <div class="facto">
     <div class="fact">
-        <h2 style="padding:10px 0px 20px 60px; text-align:left">Poverty facts</h2>
+        <h2 style="padding:10px 0px 20px 60px; text-align:left">Poverty fact</h2>
         <div class="section2" id="fact">
 
             <div class="centre">
@@ -76,25 +76,24 @@
     </div>
 </div>
 
-        <div class="section3" style="text-align: center">
-            <h3 style="padding-top: 50px">Necesary Actions</h3>
+        <div class="section3" style="text-align: center; height:60px">
+        
+        </div>
+
+        <div class="section4">
+            <h3 style="padding-top: 40px; text-align:center">Necesary Actions</h3>
             <div class="inside">
                 <img src="{{asset('img/action.png')}}" alt="img">
                 <div class="actionplan">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, labore.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, labore.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, labore.</p>
+                    <ul>
+                    <li>Empowering people living in poverty</li>
+                    <li>Improving access to entrepreneurial opporunities and productive resources</li>
+                    <li>Working with interested donors and recipients to allocate increased shares of <br>
+                             official development assistance</li>
+                    </ul>
                 </div>
             
              </div>
-        </div>
-
-        <div class="goal">
-            <h3>Our Goal</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatibus non 
-                ducimus soluta ullam unde voluptatum error et voluptate reiciendis dolor sequi, 
-                quo, cumque, quidem esse eum! Nostrum, quos voluptas?
-            </p>
         </div>
 
    

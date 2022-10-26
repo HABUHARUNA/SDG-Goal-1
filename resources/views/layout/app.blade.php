@@ -10,6 +10,7 @@
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Open Sans' >
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/02169c075b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     @include('inc.navbar')

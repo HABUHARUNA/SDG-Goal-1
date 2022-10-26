@@ -48,7 +48,7 @@
         @enderror
 
       
-      <input name="address" type="text" id="" class="" placeholder="Enter your Address" value="{{old('address')}}" required>
+      <input name="address" type="textarea" id="" class="" placeholder="Enter your address" value="{{old('address')}}" required>
           <br>
           @error('password')
           <div class="text-danger">
@@ -79,8 +79,6 @@
          <input name="profile_photo" type="file" id="" class="" accept="image/*" style="padding-left:120px"  required> <br> <br>
 
             <input type="submit" value="Register">
-              <p class="">Have already an account? <a href="/volunteer/login"
-                class=""><u>Login here</u></a></p>  
         </form>
       </div>
 </div>
