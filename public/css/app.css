@@ -50,6 +50,9 @@
     color: white;
     margin-left: 15px;
   }
+  .sidebar_item a{
+    text-decoration:none;
+  }
   *{
     font-family: 'Poppins';
 }.dropdown {

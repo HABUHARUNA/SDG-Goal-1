@@ -5,10 +5,12 @@
 
     <div class="sidebar">
         <div class="sidebar_container">
-            <div class="sidebar_item">
+             <a href="{{route('student.edit')}}">
+        <div class="sidebar_item">
                 <i class="fas fa-th-large"></i>
                 <p>Dashboard</p>
             </div>
+        </a>
 
             <div class="sidebar_item">
                 <i class="fas fa-book"></i>
