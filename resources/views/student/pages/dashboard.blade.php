@@ -5,7 +5,7 @@
 
     <div class="sidebar">
         <div class="sidebar_container">
-             <a href="{{route('student.edit')}}">
+             <a href="{{route('student_profile')}}">
         <div class="sidebar_item">
                 <i class="fas fa-th-large"></i>
                 <p>Dashboard</p>
