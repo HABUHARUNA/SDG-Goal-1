@@ -109,11 +109,5 @@ class StudentController extends Controller
 
         return redirect('/');
     }
-    public function studentData($id){
-        $students = User::find($id);
-    
-        return view('student.pages.studentData',compact('students'));
-    
-    }
 
 }
