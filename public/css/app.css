@@ -313,6 +313,7 @@ h3{
 }
 .team3{
     padding-bottom: 110px;
+    max-width: 40%;
 }
 .courses{
     display: flex;

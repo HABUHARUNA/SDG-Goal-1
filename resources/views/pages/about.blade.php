@@ -72,36 +72,26 @@
         Baking Volunteer</span>
     </div>
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude"> <br><br>
-        <span>Name: Jude <br>
+        <img src="{{asset('img/jane.jpeg')}}" alt="jude"> <br><br>
+        <span>Jane Mokobia<br>
         Tailoring Volunteer</span>
     </div>
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude"> <br><br>
-        <span>Name: Jude <br>
-        Tailoring Volunteer</span>
+        <img src="{{asset('img/umar.jpeg')}}" alt="jude"> <br><br>
+        <span>Mansir Umar Maibazamana<br>
+        Web Dev Volunteer</span>
     </div>
 </div>
 <div class="team3">
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude"> <br><br>
-        <span>Name: Jude <br>
+        <img src="{{asset('img/damen.jpeg')}}" alt="jude"> <br><br>
+        <span>Damen Kangnaan<br>
         Tailoring Volunteer</span>
     </div>
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude"> <br><br>
-        <span>Name: Jude <br>
-        Tailoring Volunteer</span>
-    </div>
-    <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude"> <br><br>
-        <span>Name: Jude <br>
-        Tailoring Volunteer</span>
-    </div>
-    <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude"> <br><br>
-        <span>Name: Jude <br>
-        Tailoring Volunteer</span>
+        <img src="{{asset('img/slimzy.jpeg')}}" alt="jude"> <br><br>
+        <span>Salim Tasiu Ibrahim<br>
+        Baking Volunteer</span>
     </div>
 </div>
 
