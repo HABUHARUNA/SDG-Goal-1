@@ -5,15 +5,15 @@
 
     <div class="sidebar">
         <div class="sidebar_container">
-            <div class="sidebar_item">
-                <i class="fas fa-th-large"></i>
+        <div class="sidebar_item">
+                <i class="fas fa-th-large" id="dash"></i>
                 <p>Dashboard</p>
             </div>
 
-            <div class="sidebar_item">
-                <i class="fas fa-book"></i>
-                <a href="/student/web"  type="button" >Course</a>
-            </div>
+        <div class="sidebar_item">
+            <i class="fas fa-book"></i>
+            <p>Courses</p>
+        </div>
 
             <div class="sidebar_item">
                 <i class="fas fa-eye"></i>
@@ -38,10 +38,20 @@
             </div>
         </div>
     </div>
-
-<<<<<<< HEAD
-=======
 </div>
->>>>>>> f4f6261bab23964db96370af4d8ffc9fabfa400e
+<div class="studentDetails">
+    <div class="pic">
+        <p>
+            <img src="{{URL::asset('public/user/'.Auth::user()->profile_pic)  }}" alt="pic" style="height:250px;width:250px; border-radius:50%;">
+        </p>
+    </div>
+    <div class="content">
+        <p> <strong>Firstname:</strong> {{Auth::user()->firstname}}  </p>
+        <p> <strong>Lastname:</strong> {{Auth::user()->lastname}}   </p>
+        <p> <strong>Email:</strong> {{Auth::user()->email}}</p>
+        <p> <strong>Address:</strong> {{Auth::user()->address}}  </p>
+    </div>
+</div>
+
     <script src="{{ URL::asset('js/script.js') }}"></script>
 @endsection

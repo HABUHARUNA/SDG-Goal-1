@@ -92,7 +92,10 @@
         @endif
     <div class="hero2"> 
 
-      <h3 style="text-align: center; padding: 30px 0px 10px 0px;">Volunteer Registration Form</h3> 
+      <h3 style="text-align: center; padding: 30px 0px 10px 0px;">Volunteer Registration Form</h3>
+      <div style="text-align: center">
+        <p>Registering as a volunteer means you could be assigned to make weekly posts for the courses or be assigned to the rural communities as tutors</p>
+      </div> 
     
       <div>
             <form action="{{Route('volunteer.create')}}" method="POST"  class="contactform" enctype="multipart/form-data">
