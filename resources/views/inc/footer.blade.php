@@ -22,5 +22,7 @@
         <p style="padding-top: 150px; font-size: 12px;">Copyright 2022 Skills for Wealth. All rights reserved.</p>
         </div>
 </div>
+</div>
 
+<div class="afterfooter">
 </div>

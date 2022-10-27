@@ -5,6 +5,33 @@
 
 <div class="hero">
 
+    <div class="text">
+        <div class="maintext">
+                <div class="container">
+                            <div class="learn">
+                                <p>Learn</p>
+                            </div>
+
+                            <div class="skills">
+                                <span>to earn</span>
+                                <span>to grow</span>
+                                <span>for free</span>
+                                <span>to earn</span>
+                                <span>today</span>
+                            </div>
+                </div>
+                
+        </div>
+    
+            <div class="text1" style="padding-top:20px;">
+                <p>
+                    Skills For Wealth is an organization that<br> 
+                    is in pursuance of SDG Goal 1-(No Poverty).
+                </p>
+                <a href="/courses"><button class="offer">See courses we offer</button></a>
+            </div>
+</div>
+
     <div class="bg">
         <img src="{{asset('img/yellowcircle.png')}}" alt="" width="600px" height="400px" class="bgimg">
         <img src="{{asset('img/blue-circle.png')}}" alt="" width="600px" height="400px" class="bgimg">
@@ -25,34 +52,21 @@
         <img src="{{asset('img/whitedots.png')}}" alt="bluecircle" height="105px" width="75px">
         <img src="{{asset('img/greencircle.png')}}" alt="bluecircle" height="35px" width="35px">
     </div>
+</div>
 
-    <div class="text">
-            <div class="maintext">
-                    <div class="container">
-                                <div class="learn">
-                                    <p>Learn</p>
-                                </div>
+<div class="bg2">
+    <img src="{{asset('img/yellowcircle.png')}}" alt="" width="600px" height="400px" class="bgimg2">
+    <img src="{{asset('img/blue-circle.png')}}" alt="" width="600px" height="400px" class="bgimg2">
+    <img src="{{asset('img/greencircle.png')}}" alt="" width="600px" height="400px" class="bgimg2" style="display: none">
+    <img src="{{asset('img/greencircle.png')}}" alt="" width="600px" height="400px" class="bgimg2">
+</div>
 
-                                <div class="skills">
-                                    <span>to earn</span>
-                                    <span>to grow</span>
-                                    <span>for free</span>
-                                    <span>to earn</span>
-                                    <span>today</span>
-                                </div>
-                    </div>
-                    
-            </div>
-        
-            <div class="text1" style="padding-top:20px;">
-                <p>
-                    Skills4Wealth is an organization that<br> 
-                    is in pursuance of SDG Goal 1-(No Poverty).
-                </p>
-                <a href="/courses"><button class="offer">See courses we offer</button></a>
-            </div>
-   </div>
-    </div>
+<div class="imgslide2">
+    <img src="{{asset('img/tailoring.png')}}" alt="" class="slides2" height="400" width="600px">
+    <img src="{{asset('img/bakers.png')}}" alt="" class="slides2" height="400px" width="600px">
+    <img src="{{asset('img/coding.png')}}" alt="" class="slides2" height="400px" width="600px">
+    <img src="{{asset('img/coding.png')}}" alt="" class="slides2" height="400px" width="600px">
+</div>
 
 <div class="facto">
     <div class="fact">
@@ -64,8 +78,8 @@
             </div>
 
             <div class="percent" style="text-align: center">
-                <h1 style="font-size:120px; margin-top:15px;">26%</h1>
-                    <p style="margin: 30px; text-align:justify; padding-top:30px; width: 70%">
+                <h1>26%</h1>
+                    <p>
                         "One prevailing cause of poverty is unemployment. For Plateau State, according <br> 
                         to the National Bureau of Statistics labour data for 4th Quarter 2020, the State  <br> 
                         has a total working-age population of 2,690,344 with less than half in the labour  <br> 
@@ -142,7 +156,39 @@
     }
     </script>
 
+<script>
+    var myIndex = 0;
+    kcarousel();
+    
+    function kcarousel() {
+      var i;
+      var x = document.getElementsByClassName("slides2");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(kcarousel, 8000); // Change image every 8 seconds
+    }
+    </script>
 
+<script>
+var myIndex = 0;
+dcarousel();
+
+function dcarousel() {
+  var i;
+  var x = document.getElementsByClassName("bgimg2");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(dcarousel, 8000); // Change image every 8 seconds
+}
+</script>
     
 
 @endsection

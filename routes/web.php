@@ -73,3 +73,4 @@ Route::get('/volunteer/mypost', [VolunteerController::class, 'posts']);
 // Route::get('/volunteer/tailoring/delete/{id}', [TailoringController::class ,'destroy'])->middleware('admin.auth');
 
 
+Route::get('/web',[StudentController::class,'studentData'])->name('student_profile');

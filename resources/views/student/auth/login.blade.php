@@ -87,7 +87,7 @@
             <input name="password" type="password" id="" class=""  placeholder="Enter your password" required>
             <br>
             <input type="submit" value="Login">
-                    <p class="">New to Skills4Wealth? <a href="/student/register"
+                    <p class="">New to Skills For Wealth? <a href="/student/register"
                       class=""><u> Register here</u></a></p>  
               </form>
             </div>
