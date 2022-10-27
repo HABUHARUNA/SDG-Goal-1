@@ -22,7 +22,7 @@
           <option value="{{$course->id}}">{{$course->name}}</option>
         @endforeach
      
-    </select>
+    </select> <br> <br>
 
       <input type="submit" value="Post" class="subbtn">
           

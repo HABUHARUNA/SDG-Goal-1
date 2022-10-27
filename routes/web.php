@@ -49,8 +49,8 @@ Route::get('/volunteer/register', [VolunteerController::class, 'register'])->nam
 Route::get('/volunteer/login', [VolunteerController::class, 'login'])->name('admin.login');
 Route::post('/volunteer/addcourse', [VolunteerController::class, 'add_course'])->name('add.course');
 Route::get('/volunteer/post', [VolunteerController::class, 'post']);
-Route::post('/volunteer/create/post', [VolunteerController::class, 'create_post'])->name('volunteer.post');
-Route::get('/volunteer/mypost', [VolunteerController::class, 'posts']);
+Route::post('/volunteer/create/post', [Volunteer::class, 'create_post'])->name('volunteer.post');
+
 
 // // POST 
 // Route::get('/volunteer/web', [WebController::class, 'webDev'])->middleware('admin.auth');

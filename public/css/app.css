@@ -16,6 +16,11 @@
     height: 20px;
     width: 100%;
   }
+  .alert{
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+  }
   .sidebar {
     height: 100vh;
     width: 55px;
@@ -69,7 +74,6 @@
     padding: 6px 12px;
     text-decoration: none;
     display: block;
-
 }
 .dropbtn{
     color: hsl(192, 100%, 9%);
@@ -100,6 +104,7 @@
 .hero3{
     width: 100%;
     background-color: #D8E3E8;
+    height: 120vh;
 }
 .imgslide{
     top:8%;
@@ -286,25 +291,28 @@ h3{
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    padding-bottom: 30px;
 }
 .team img, .team2 img, .team3 img{
     border-radius: 50%;
     width: 200px;
     height: 200px;
 }
-.team p, .team2 p, .team3 p{
-    padding-left: 50px;
-    padding-top: 20px;
+.person span{
+    padding-left: 30px;
+    margin-top: 20px;
 }
+
 .team2{
-    max-width: 70%;
+    max-width: 80%;
     display: flex;
     margin: 20px auto;
     padding-left: 120px;
+    padding-bottom: 20px;
     justify-content: space-around;
 }
 .team3{
-    padding-bottom: 120px;
+    padding-bottom: 110px;
 }
 .courses{
     display: flex;
@@ -490,11 +498,22 @@ h3{
     margin-top: 40px;
   }
   .form-group{
-    margin: 10px 25%;
+    margin: 10px 30%;
   }
-  .form-group input {
+  .form-group input[type=text] {
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: 1px gray solid;
+    width:60%;
+    margin-bottom: 10px;
+  }
+  .form-group input[type=submit] {
     border-radius: 10px;
-    padding: 12px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: black;
+    width: 40%;
   }
   .form-group label, .form-group input{
     display:flex;
@@ -695,13 +714,13 @@ textarea{
 .donatee{
     width:50%; 
 }
-.studentDetails .pic{
+.studentDetails{
     position: absolute;
     top: 15%;
     left: 39%;
     width: 250px;
-    height:250px;
-    border:2px solid rgb(10, 29, 65);
+    /* height:250px; */
+    /* border:2px solid rgb(10, 29, 65); */
     border-radius: 50%;
     margin-top: 23px;
 }
@@ -711,10 +730,53 @@ textarea{
     left: 25%;
 }
 .studentDetails .content p{
-    font-size: 23px;
+    font-size: 16px;
     color:hsl(192, 100%, 9%);
 }
 
+.voldashboard{
+    display: flex;
+    justify-content: space-between;
+}
+/* .contactform2{
+    margin-left: -50%;
+} */
+
+table {
+    font-family:'Poppins';
+    border-collapse: collapse;
+    width: 200%;
+    margin-left: -40%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+.actionbtn{
+    color:white;
+    background-color: hsl(192, 100%, 9%);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  td a{
+    text-decoration: none;
+    color: white;
+  }
+  td a:hover{
+    text-decoration: none;
+    color:hsl(192, 100%, 9%);
+    background-color: white;
+    border: 1px solid hsl(192, 100%, 9%);
+  }
+  #actionbtn{
+    margin-left: 10px;
+  }
 
 @media (max-width:500px){
     .hero2{
