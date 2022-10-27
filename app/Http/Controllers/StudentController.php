@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\Hash;
 
 class StudentController extends Controller
 {
-    public function WebDev(){
+    public function Mycourse(){
         $posts = Post::where('course_id',Auth::user()->course_id)->orderBy('created_at', 'desc')->paginate(10);
 
 
-         return view('student.pages.web', compact('posts'));
+         return view('student.pages.mycourse', compact('posts'));
     }
     public function baking(){
         // $posts = Post::orderBy('created_at', 'desc')->paginate(10);
@@ -64,6 +64,10 @@ class StudentController extends Controller
                 'password' => 'required|min:4'
             ]);
             if(auth()->attempt($credentials)){
+                if(auth()->user()->is_admin == 1){
+                    $request->session()->regenerateToken();
+                    return redirect()->route('admin.dashboard');
+                }
             $request->session()->regenerateToken();
            
             return redirect()->route('student.dashboard')->with('success', 'Student Logged in');

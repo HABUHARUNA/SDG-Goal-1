@@ -50,11 +50,11 @@
         
 
         <div class="results">
-            @if (Session::get('success'))
+            {{-- @if (Session::get('success'))
                   <div class="alert alert-success">
                       {{Session::get('success')}}
                   </div>
-            @endif
+            @endif --}}
             @if (Session::get('error'))
               <div class="alert alert-danger">
                   {{Session::get('error')}}
@@ -63,7 +63,7 @@
       </div>
       <div class="hero2"> 
 
-        <h3 style="text-align: center; padding: 30px 0px 10px 0px;">Student Login Form</h3> 
+        <h3 style="text-align: center; padding: 30px 0px 10px 0px;"> Login Form</h3> 
       
         <div>
               <form action="{{Route('student.check')}}" method="POST"  class="contactform" enctype="multipart/form-data">

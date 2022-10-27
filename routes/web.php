@@ -4,10 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\StudentController;
-use App\Http\Controllers\Post\WebController;
-use App\Http\Controllers\Post\BakingController;
-use App\Http\Controllers\Post\TailoringController;
-
+use App\Http\Controllers\Admin\accoutApprovalcontroller;
+use App\Http\Controllers\Admin\addcoursecontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,9 +30,7 @@ Route::get('/courses', [PagesController::class, 'courses']);
 
 // Student
 Route::get('/student/register', [StudentController::class, 'register'])->name('student.register');
-Route::get('/student/web', [StudentController::class, 'WebDev'])->middleware('student.auth');
-Route::get('/student/baking', [StudentController::class, 'baking'])->middleware('student.auth');
-Route::get('/student/tailoring', [StudentController::class, 'tailor'])->middleware('student.auth');
+Route::get('/student/mycourse', [StudentController::class, 'Mycourse'])->middleware('student.auth');
 Route::post('/student/create', [StudentController::class, 'create'])->name('student.create');
 Route::get('/student/login', [StudentController::class, 'login'])->name('student.login');
 Route::get('/student/dashboard', [StudentController::class, 'dashboard'])->name('student.dashboard')->middleware('student.auth');
@@ -44,14 +40,20 @@ Route::get('/student/logout', [StudentController::class, 'logout'])->name('stude
 // Volunteer
 Route::post('/volunteer/create', [VolunteerController::class, 'create'])->name('volunteer.create');
 Route::post('/volunteer/check', [VolunteerController::class, 'check'])->name('volunteer.login');
-Route::get('/volunteer/dashboard', [VolunteerController::class, 'dashboard'])->name('volunteer.dashboard')->middleware('admin.auth');
+Route::get('/volunteer/dashboard', [VolunteerController::class, 'dashboard'])->name('volunteer.dashboard')->middleware('admin.auth','approved');
 Route::get('/volunteer/register', [VolunteerController::class, 'register'])->name('volunteer.register');
 Route::get('/volunteer/login', [VolunteerController::class, 'login'])->name('admin.login');
-Route::post('/volunteer/addcourse', [VolunteerController::class, 'add_course'])->name('add.course');
 Route::get('/volunteer/post', [VolunteerController::class, 'post']);
-Route::post('/volunteer/create/post', [Volunteer::class, 'create_post'])->name('volunteer.post');
-
-
+Route::post('/volunteer/create/post', [VolunteerController::class, 'create_post'])->name('volunteer.post');
+Route::get('/volunteer/message', [VolunteerController::class, 'message'])->name('volunteer.message');
+// Admin
+Route::get('/admin/dashboard', [accoutApprovalcontroller::class, 'dashboard'])->name('admin.dashboard');
+Route::get('/admin/volunteer/pending', [accoutApprovalcontroller::class, 'volunteer']);
+Route::get('/admin/volunteer/show/{id}', [accoutApprovalcontroller::class, 'show'])->name('admin.show');
+Route::get('/admin/volunteer/delete/{id}' ,[accoutApprovalcontroller::class, 'delete'])->name('admin.delete');
+Route::get('/admin/volunteer/approve/{id}', [accoutApprovalcontroller::class, 'approve'])->name('admin.approve');
+Route::get('/volunteer/courses', [addcoursecontroller::class, 'addCourse']);
+Route::post('/volunteer/addcourse', [addcoursecontroller::class, 'add_course'])->name('add.course');
 // // POST 
 // Route::get('/volunteer/web', [WebController::class, 'webDev'])->middleware('admin.auth');
 // Route::post('/volunteer/webpost', [WebController::class, 'post_web'])->name('web.post');

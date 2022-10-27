@@ -94,15 +94,18 @@ class VolunteerController extends Controller
         $volunteer->update();
         return redirect()->route('volunteer.dashboard')->with('success', 'Volunteer Updated Successfully');
     }
-    public function add_course(Request $request){
-        $form_data = $request->validate([
-            'course' => 'required'
-        ]);
-        $course = new Course();
-        $course->name = $request->course;
-        $course->save();
-        return redirect()->route('volunteer.dashboard')->with('success', 'Course successfully add');
-    }
+    // public function addCourse(){
+    //     return view('admin.addcourse');
+    // }
+    // public function add_course(Request $request){
+    //     $form_data = $request->validate([
+    //         'course' => 'required'
+    //     ]);
+    //     $course = new Course();
+    //     $course->name = $request->course;
+    //     $course->save();
+    //     return redirect()->route('volunteer.dashboard')->with('success', 'Course successfully add');
+    // }
     public function post(){
         $courses = Course::all();
         return view('volunteer.Uploads.post', compact('courses'));
@@ -122,5 +125,8 @@ class VolunteerController extends Controller
         $Post->course_id = $request->course_id;
         $Post->save();
         return redirect()->route('volunteer.dashboard')->with('success', 'Post Created Successfully');
+    }
+    public function message(){
+        return view('volunteer.auth.message');
     }
 }
