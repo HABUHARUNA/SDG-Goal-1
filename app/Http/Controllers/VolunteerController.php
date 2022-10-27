@@ -7,6 +7,7 @@ use App\Models\{Admin, Post, Course};
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+
 class VolunteerController extends Controller
 {
     //
@@ -56,9 +57,15 @@ class VolunteerController extends Controller
         return back()->withErrors(['error' => 'Invalid Username/Password!']);
     }
     public function dashboard(){
-       
+    //    $admin_id = Auth::guard('admin')->user()->id;
+    //    $admin = Admin::find($admin_id);
         return view('volunteer.pages.dashboard');
         
+    }
+    public function posts(){
+        $admin_id = Auth::guard('admin')->user()->id;
+        $admin = Admin::find($admin_id);
+        return view('volunteer.mypost.post')->with('posts', $admin->posts);
     }
     public function logout(Request $request){
         Auth::logout();
@@ -101,7 +108,7 @@ class VolunteerController extends Controller
         $course = new Course();
         $course->name = $request->course;
         $course->save();
-        return redirect()->route('volunteer.dashboard')->with('success', 'Course successfully add');
+        return redirect()->route('volunteer.dashboard')->with('success', 'Course successfully added');
     }
     public function post(){
         $courses = Course::all();
@@ -122,5 +129,10 @@ class VolunteerController extends Controller
         $Post->course_id = $request->course_id;
         $Post->save();
         return redirect()->route('volunteer.dashboard')->with('success', 'Post Created Successfully');
+    }
+    
+    public function show($id){
+        $post = Admin::find($id);
+        return view ("volunteer.mypost.show", compact("post"));
     }
 }
