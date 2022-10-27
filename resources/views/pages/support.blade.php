@@ -5,7 +5,7 @@
 
 <div style="text-align: center">
     <h3 style="padding-top:20px">Partner with us</h3>
-    <img src="{{asset('img/donation.png')}}" alt="img2" width="50%" height="280px">
+    <img src="{{asset('img/donation.png')}}" alt="img2" class="donatee" height="280px">
 </div>
     
 <div class="partner" style="text-align: center;">

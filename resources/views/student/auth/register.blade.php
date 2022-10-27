@@ -119,13 +119,13 @@
       <label for="Tailoring">Tailoring</label>
       <input name="course" type="radio" value="Web Development"> 
       <label for="Web Development">Web Development</label> --}}
+      
 <div class="form-group">
     <p>Courses</p>
     <select name="course_id" id="courses">
         @foreach ($courses as $course)
           <option value="{{$course->id}}">{{$course->name}}</option>
         @endforeach
-     
     </select>
 </div>
 </body>
