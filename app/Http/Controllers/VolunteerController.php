@@ -94,6 +94,7 @@ class VolunteerController extends Controller
         $volunteer->update();
         return redirect()->route('volunteer.dashboard')->with('success', 'Volunteer Updated Successfully');
     }
+<<<<<<< HEAD
     // public function addCourse(){
     //     return view('admin.addcourse');
     // }
@@ -106,6 +107,17 @@ class VolunteerController extends Controller
     //     $course->save();
     //     return redirect()->route('volunteer.dashboard')->with('success', 'Course successfully add');
     // }
+=======
+    public function add_course(Request $request){
+        $form_data = $request->validate([
+            'course' => 'required'
+        ]);
+        $course = new Course();
+        $course->name = $request->course;
+        $course->save();
+        return redirect()->route('volunteer.dashboard')->with('success', 'Course successfully added');
+    }
+>>>>>>> 04b9f8eb4f4fdbe6b760aedc8fa82d5f9e0dcae4
     public function post(){
         $courses = Course::all();
         return view('volunteer.Uploads.post', compact('courses'));

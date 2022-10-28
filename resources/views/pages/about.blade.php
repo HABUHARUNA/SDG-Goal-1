@@ -39,56 +39,59 @@
 <h2 style="text-align: center; padding-top:50px; padding-bottom:50px;">Our Team</h2>
 <div class="team">
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
+        <img src="{{asset('img/henry.jpeg')}}" alt="jude"> <br><br>
+        <span>Henry Anyichie <br>
+        Tailoring Volunteer</span>
     </div>
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
+        <img src="{{asset('img/hope.jpeg')}}" alt="jude"> <br> <br>
+        <span>Hope Haruna Habu <br>
+        Web Development Volunteer</span>
     </div>
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
+        <img src="{{asset('img/jonathan.jpeg')}}" alt="jude"> <br> <br>
+        <span>Gankon Jonathan <br>
+        Senior Baking Volunteer</span>
     </div>
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
+        <img src="{{asset('img/nanadom.jpeg')}}" alt="jude"> <br><br>
+        <span>Wade Nandom Felix <br>
+        Tailoring Volunteer</span>
     </div>
 </div>
+
 <div class="team2">
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
+        <img src="{{asset('img/dapper.jpeg')}}" alt="jude"> <br> <br>
+        <span>Jugu Paul Wash <br>
+        Web Dev Volunteer</span>
     </div>
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
+        <img src="{{asset('img/jude.jpeg')}}" alt="jude"><br> <br>
+        <span>Jude Ubi <br>
+        Baking Volunteer</span>
     </div>
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
+        <img src="{{asset('img/jane.jpeg')}}" alt="jude"> <br><br>
+        <span>Jane Mokobia<br>
+        Tailoring Volunteer</span>
     </div>
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
+        <img src="{{asset('img/umar.jpeg')}}" alt="jude"> <br><br>
+        <span>Mansir Umar Maibazamana<br>
+        Web Dev Volunteer</span>
     </div>
 </div>
 <div class="team3">
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
+        <img src="{{asset('img/damen.jpeg')}}" alt="jude"> <br><br>
+        <span>Damen Kangnaan<br>
+        Tailoring Volunteer</span>
     </div>
     <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
-    </div>
-    <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
-    </div>
-    <div class="person">
-        <img src="{{asset('img/img.png')}}" alt="jude">
-        <p>Name: Jude</p>
+        <img src="{{asset('img/slimzy.jpeg')}}" alt="jude"> <br><br>
+        <span>Salim Tasiu Ibrahim<br>
+        Baking Volunteer</span>
     </div>
 </div>
 
